@@ -1,0 +1,835 @@
+/* Contact Page - Enhanced Styles */
+
+.contact-page {
+  background: #202026;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.contact-header {
+  background: #202026;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.contact-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent); */
+  pointer-events: none;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+.text-light {
+  color: #e0e0e0 !important;
+}
+
+.divider-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, #b8941f);
+  margin: 0 auto;
+  position: relative;
+}
+
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #d4af37;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divider-line::before {
+  left: -20px;
+}
+
+.divider-line::after {
+  right: -20px;
+}
+
+/* Map Section */
+.map-section {
+  background: #202026;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #202026;
+  pointer-events: none;
+}
+
+.section-header {
+  position: relative;
+  z-index: 2;
+}
+
+/* Location Details Panel */
+.location-details-panel {
+  background: rgba(26, 26, 26, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  height: fit-content;
+  transition: all 0.3s ease;
+}
+
+.location-details-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Business Header */
+.business-header {
+  padding: 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.business-logo {
+  flex-shrink: 0;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 8px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.business-header:hover .logo-circle {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.business-info {
+  flex: 1;
+}
+
+.business-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.business-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.rating-count {
+  font-size: 14px;
+  color: #888;
+}
+
+.business-type {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Quick Info Section */
+.quick-info-section {
+  padding: 0;
+  margin-top: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(212, 175, 55, 0.05);
+  transform: translateX(5px);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  margin-top: 2px;
+  transition: transform 0.2s ease;
+}
+
+.info-item:hover .info-icon {
+  transform: scale(1.1);
+}
+
+.address-icon {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+.phone-icon {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+.time-icon {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+
+.services-icon {
+  background: rgba(156, 39, 176, 0.1);
+  color: #9c27b0;
+}
+
+.info-details {
+  flex: 1;
+}
+
+.info-details strong {
+  font-size: 14px;
+  color: #d4af37;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.info-details p {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.phone-link {
+  color: #4caf50;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+}
+
+.phone-link:hover {
+  color: #66bb6a;
+  text-decoration: underline;
+}
+
+.status-open {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: #888 !important;
+  font-size: 12px;
+}
+
+/* Action Buttons Section */
+.action-buttons-section {
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  background: rgba(26, 26, 26, 0.5);
+}
+
+.primary-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.secondary-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Button Styles */
+.directions-btn {
+  background: linear-gradient(135deg, #d4af37, #f1c40f) !important;
+  border: none !important;
+  color: #1a1a1a !important;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+  background: linear-gradient(135deg, #f1c40f, #d4af37) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  color: #1a1a1a !important;
+}
+
+.call-btn {
+  background: rgba(76, 175, 80, 0.2) !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+  color: #4caf50 !important;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+  background: rgba(76, 175, 80, 0.3) !important;
+  border-color: #4caf50 !important;
+  color: #4caf50 !important;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: transparent !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  color: #d4af37 !important;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(212, 175, 55, 0.1) !important;
+  border-color: #d4af37 !important;
+  color: #d4af37 !important;
+}
+
+/* Google Maps Embed */
+.map-embed-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  height: 600px;
+  transition: all 0.3s ease;
+}
+
+.map-embed-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.map-embed-container {
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.google-maps-embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Map Controls Overlay */
+.map-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.map-control-btn {
+  width: 44px !important;
+  height: 44px !important;
+  background: rgba(26, 26, 26, 0.9) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 8px !important;
+  color: #d4af37 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 0 !important;
+}
+
+.map-control-btn:hover {
+  background: rgba(212, 175, 55, 0.2) !important;
+  border-color: #d4af37 !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background: #202026;
+  position: relative;
+}
+
+.contact-form-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(45deg, rgba(212, 175, 55, 0.05), transparent); */
+  pointer-events: none;
+}
+
+/* Form Card Styles */
+.form-card {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.form-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 70px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.form-card .card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #f1c40f, #d4af37);
+}
+
+/* Form Styles */
+.custom-form-control {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.custom-form-control:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #d4af37;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.custom-form-control::placeholder {
+  color: #b0b0b0;
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #d4af37;
+  font-size: 14px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(45deg, #d4af37, #b8941f);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 40px;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #b8941f, #9a7c1a);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  color: #000;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Security Badge */
+.security-badge {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.security-badge:hover {
+  opacity: 1;
+}
+
+.shield-icon {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}
+
+/* Full Screen Modal */
+.map-modal .modal-content {
+  background: rgba(26, 26, 26, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.map-modal .modal-header {
+  background: rgba(26, 26, 26, 0.9);
+  padding: 20px 24px;
+}
+
+.map-modal .btn-close {
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 24px;
+  opacity: 0.8;
+}
+
+.map-modal .btn-close:hover {
+  opacity: 1;
+}
+
+.fullscreen-map-container {
+  height: 70vh;
+  min-height: 500px;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}
+
+.fullscreen-map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Trust Section */
+.trust-section {
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.trust-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.trust-badge:hover {
+  transform: translateY(-3px);
+}
+
+.badge-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+  animation: goldGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.7));
+  }
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.location-details-panel,
+.map-embed-card,
+.form-card {
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* Focus States */
+.directions-btn:focus,
+.call-btn:focus,
+.secondary-btn:focus,
+.map-control-btn:focus,
+.submit-btn:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+.phone-link:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .map-embed-card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .map-embed-card {
+    height: 450px;
+    margin-top: 20px;
+  }
+  
+  .business-header {
+    padding: 20px;
+  }
+  
+  .secondary-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .contact-form-section {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header,
+  .map-section,
+  .contact-form-section {
+    padding: 20px 0;
+  }
+  
+  .map-embed-card {
+    height: 350px;
+  }
+  
+  .business-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .business-name {
+    font-size: 18px;
+  }
+  
+  .primary-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .secondary-actions {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  
+  .fullscreen-map-container {
+    height: 60vh;
+  }
+  
+  .trust-badges {
+    flex-direction: column;
+    gap: 2rem !important;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-header .display-4 {
+    font-size: 2rem;
+  }
+  
+  .section-header .display-5 {
+    font-size: 1.75rem;
+  }
+  
+  .map-embed-card {
+    height: 300px;
+  }
+  
+  .info-item {
+    padding: 12px 16px;
+  }
+  
+  .action-buttons-section {
+    padding: 16px;
+  }
+  
+  .map-controls {
+    top: 12px;
+    right: 12px;
+  }
+  
+  .map-control-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .form-card .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .location-details-panel,
+  .form-card {
+    border: 2px solid #d4af37;
+    background: #000;
+  }
+  
+  .business-name,
+  .info-details strong,
+  .text-gold {
+    color: #ffff00 !important;
+  }
+  
+  .info-details p,
+  .text-light {
+    color: #ffffff !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .location-details-panel,
+  .map-embed-card,
+  .form-card {
+    animation: none;
+  }
+  
+  .info-icon,
+  .logo-circle,
+  .map-control-btn,
+  .trust-badge {
+    transition: none;
+  }
+  
+  .badge-icon {
+    animation: none;
+  }
+}
+
+/* Loading States */
+.google-maps-embed {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+}
+
+/* Print Styles */
+@media print {
+  .contact-page {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .location-details-panel,
+  .form-card {
+    border: 1px solid #ccc !important;
+    background: white !important;
+  }
+  
+  .map-embed-card {
+    display: none;
+  }
+  
+  .action-buttons-section {
+    display: none;
+  }
+  
+  .trust-section {
+    display: none;
+  }
+}
