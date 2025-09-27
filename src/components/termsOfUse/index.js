@@ -6,17 +6,17 @@ import bannerimg from "../../images/banners/banner2.png";
 import Footer from "../footer";
 import Scrollbar from "../scrollbar";
 
-const PrivacyPolicy = () => {
+const TermsOfUse = () => {
   return (
     <>
       {/* Page Title Section */}
       <PageTitle
-        pageTitle={"Privacy Policy"}
-        pagesub={"Privacy Policy"}
+        pageTitle={"Terms of Use"}
+        pagesub={"Terms of Use"}
         backgroundImage={bannerimg}
       />
 
-      {/* Privacy Policy Content */}
+      {/* Terms of Use Content */}
       <section
         style={{
           backgroundColor: "#202026",
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                   </p>
                 </div>
 
-                {/* Introduction */}
+                {/* Section 1 */}
                 <div style={{ marginBottom: "50px" }}>
                   <h2
                     style={{
@@ -63,24 +63,16 @@ const PrivacyPolicy = () => {
                       paddingBottom: "10px",
                     }}
                   >
-                    1. Introduction
+                    1. Acceptance of Terms
                   </h2>
                   <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
-                    At Adams Aurum ("we," "us," or "our"), we are committed to
-                    protecting your privacy and maintaining the confidentiality
-                    of your personal information. This Privacy Policy explains
-                    how we collect, use, disclose, and safeguard your
-                    information when you visit our website, use our services, or
-                    engage in precious metals transactions with us.
-                  </p>
-                  <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
-                    By accessing our website or using our services, you
-                    acknowledge that you have read, understood, and agree to be
-                    bound by this Privacy Policy and our Terms of Use.
+                    By accessing and using the Adams Aurum website or services,
+                    you agree to comply with and be bound by these Terms of Use.
+                    If you do not agree, you may not access or use our services.
                   </p>
                 </div>
 
-                {/* Information We Collect */}
+                {/* Section 2 */}
                 <div style={{ marginBottom: "50px" }}>
                   <h2
                     style={{
@@ -92,74 +84,7 @@ const PrivacyPolicy = () => {
                       paddingBottom: "10px",
                     }}
                   >
-                    2. Information We Collect
-                  </h2>
-
-                  <h3
-                    style={{
-                      color: "#F4E87C",
-                      fontSize: "20px",
-                      fontWeight: "600",
-                      marginBottom: "15px",
-                    }}
-                  >
-                    2.1 Personal Information
-                  </h3>
-                  <ul
-                    style={{
-                      color: "#ddd",
-                      lineHeight: "1.8",
-                      paddingLeft: "20px",
-                      marginBottom: "25px",
-                    }}
-                  >
-                    <li>Full name, address, and contact information</li>
-                    <li>Government-issued identification documents</li>
-                    <li>Financial information and banking details</li>
-                    <li>Investment preferences and transaction history</li>
-                    <li>Employment and income information</li>
-                    <li>Tax identification numbers</li>
-                  </ul>
-
-                  <h3
-                    style={{
-                      color: "#F4E87C",
-                      fontSize: "20px",
-                      fontWeight: "600",
-                      marginBottom: "15px",
-                    }}
-                  >
-                    2.2 Technical Information
-                  </h3>
-                  <ul
-                    style={{
-                      color: "#ddd",
-                      lineHeight: "1.8",
-                      paddingLeft: "20px",
-                      marginBottom: "25px",
-                    }}
-                  >
-                    <li>IP address and device information</li>
-                    <li>Browser type and version</li>
-                    <li>Website usage patterns and analytics</li>
-                    <li>Cookies and similar tracking technologies</li>
-                    <li>Login credentials and account activity</li>
-                  </ul>
-                </div>
-
-                {/* How We Use Your Information */}
-                <div style={{ marginBottom: "50px" }}>
-                  <h2
-                    style={{
-                      color: "#D4AF37",
-                      fontSize: "28px",
-                      fontWeight: "700",
-                      marginBottom: "20px",
-                      borderBottom: "2px solid #D4AF37",
-                      paddingBottom: "10px",
-                    }}
-                  >
-                    3. How We Use Your Information
+                    2. Use of Services
                   </h2>
                   <ul
                     style={{
@@ -169,23 +94,19 @@ const PrivacyPolicy = () => {
                       marginBottom: "20px",
                     }}
                   >
+                    <li>Services are for lawful investment purposes only.</li>
                     <li>
-                      Process and fulfill your precious metals orders and
-                      transactions
+                      You must not misuse the website for fraudulent or harmful
+                      activities.
                     </li>
-                    <li>Verify your identity and comply with regulations</li>
-                    <li>Provide customer support and respond to inquiries</li>
                     <li>
-                      Send important updates about your account and transactions
+                      Unauthorized access or attempts to breach security are
+                      strictly prohibited.
                     </li>
-                    <li>Improve our website, services, and customer experience</li>
-                    <li>Conduct market research and analysis</li>
-                    <li>Prevent fraud and ensure transaction security</li>
-                    <li>Comply with legal and regulatory obligations</li>
                   </ul>
                 </div>
 
-                {/* Information Sharing */}
+                {/* Section 3 */}
                 <div style={{ marginBottom: "50px" }}>
                   <h2
                     style={{
@@ -197,40 +118,17 @@ const PrivacyPolicy = () => {
                       paddingBottom: "10px",
                     }}
                   >
-                    4. Information Sharing and Disclosure
+                    3. Intellectual Property
                   </h2>
                   <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
-                    We may share your information in the following circumstances:
+                    All content, including logos, designs, images, and text on
+                    the Adams Aurum website, is owned by or licensed to us. You
+                    may not reproduce, distribute, or use our content without
+                    prior written consent.
                   </p>
-                  <ul
-                    style={{
-                      color: "#ddd",
-                      lineHeight: "1.8",
-                      paddingLeft: "20px",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <li>
-                      With trusted third-party service providers who assist in
-                      our operations
-                    </li>
-                    <li>
-                      To comply with legal requirements, court orders, or
-                      government requests
-                    </li>
-                    <li>
-                      To protect our rights, property, or safety, or that of our
-                      customers
-                    </li>
-                    <li>
-                      In connection with a merger, acquisition, or sale of
-                      assets
-                    </li>
-                    <li>With your explicit consent or at your direction</li>
-                  </ul>
                 </div>
 
-                {/* Data Security */}
+                {/* Section 4 */}
                 <div style={{ marginBottom: "50px" }}>
                   <h2
                     style={{
@@ -242,29 +140,17 @@ const PrivacyPolicy = () => {
                       paddingBottom: "10px",
                     }}
                   >
-                    5. Data Security
+                    4. Limitation of Liability
                   </h2>
                   <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
-                    We implement industry-standard security measures to protect
-                    your personal information, including:
+                    Adams Aurum is not liable for any indirect, incidental, or
+                    consequential damages resulting from the use or inability to
+                    use our services. All investments carry risk, and past
+                    performance does not guarantee future results.
                   </p>
-                  <ul
-                    style={{
-                      color: "#ddd",
-                      lineHeight: "1.8",
-                      paddingLeft: "20px",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <li>SSL encryption for all data transmissions</li>
-                    <li>Secure servers and restricted access</li>
-                    <li>Regular security audits and monitoring</li>
-                    <li>Employee training on data protection protocols</li>
-                    <li>Multi-factor authentication for account access</li>
-                  </ul>
                 </div>
 
-                {/* Your Rights */}
+                {/* Section 5 */}
                 <div style={{ marginBottom: "50px" }}>
                   <h2
                     style={{
@@ -276,32 +162,37 @@ const PrivacyPolicy = () => {
                       paddingBottom: "10px",
                     }}
                   >
-                    6. Your Rights and Choices
+                    5. Governing Law
                   </h2>
                   <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
-                    You have the right to:
+                    These Terms of Use are governed by and construed in
+                    accordance with the laws of New York, USA, without regard to
+                    conflict of law principles.
                   </p>
-                  <ul
-                    style={{
-                      color: "#ddd",
-                      lineHeight: "1.8",
-                      paddingLeft: "20px",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <li>Access and review your personal information</li>
-                    <li>Request corrections to inaccurate information</li>
-                    <li>
-                      Request deletion of your personal information (subject to
-                      legal requirements)
-                    </li>
-                    <li>Opt-out of marketing communications</li>
-                    <li>Restrict or object to certain processing activities</li>
-                    <li>Request data portability where applicable</li>
-                  </ul>
                 </div>
 
-                {/* Contact Information */}
+                {/* Section 6 */}
+                <div style={{ marginBottom: "50px" }}>
+                  <h2
+                    style={{
+                      color: "#D4AF37",
+                      fontSize: "28px",
+                      fontWeight: "700",
+                      marginBottom: "20px",
+                      borderBottom: "2px solid #D4AF37",
+                      paddingBottom: "10px",
+                    }}
+                  >
+                    6. Changes to Terms
+                  </h2>
+                  <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
+                    We reserve the right to update or modify these Terms of Use
+                    at any time. Continued use of our services after changes
+                    indicates acceptance of the new terms.
+                  </p>
+                </div>
+
+                {/* Section 7 */}
                 <div style={{ marginBottom: "30px" }}>
                   <h2
                     style={{
@@ -316,8 +207,8 @@ const PrivacyPolicy = () => {
                     7. Contact Us
                   </h2>
                   <p style={{ color: "#eaeaea", lineHeight: "1.8" }}>
-                    If you have any questions about this Privacy Policy or our
-                    data practices, please contact us:
+                    If you have any questions about these Terms of Use, please
+                    contact us:
                   </p>
                   <div
                     style={{
@@ -330,9 +221,9 @@ const PrivacyPolicy = () => {
                     <p style={{ color: "#f1f1f1", margin: "0 0 10px" }}>
                       <strong>Adams Aurum</strong>
                       <br />
-                      Email: privacy@adamsaurum.com
+                      Email: terms@adamsaurum.com
                       <br />
-                      Phone: +1 (555) 123-4567
+                      Phone: +1 (555) 987-6543
                       <br />
                       Address: 123 Gold Street, Financial District, NY 10001
                     </p>
@@ -381,4 +272,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default TermsOfUse;

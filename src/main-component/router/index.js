@@ -34,6 +34,7 @@ import SignUpPage from '../SignUpPage'
 import ForgotPassword from '../ForgotPassword'
 import PrivacyPolicy from '../privacyPolicy';
 import PrivacyPolicyPage from '../privacyPolicy';
+import TermsOfUse from '../../components/termsOfUse';
 
 
 const AllRoute = () => {
@@ -72,6 +73,7 @@ const AllRoute = () => {
           <Route path='blog-left-sidebar' element={<BlogPageLeft/>} />
           <Route path='blog-fullwidth' element={<BlogPageFullwidth/>} />
           <Route path='privacy-policy' element={<PrivacyPolicyPage/>} />
+          <Route path='terms-of-use' element={<TermsOfUse/>} />
           
           {/* <Route path='login' element={<LoginPage/>} />
           <Route path='register' element={<SignUpPage/>} />
