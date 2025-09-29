@@ -14,6 +14,7 @@ import Logo from '../../images/logo.svg'
 import abimg from '../../images/about/aboutDetails-img.png'
 import Navbar2 from '../../components/Navbar2';
 import bannerimg from '../../images/banners/banner2.png'
+import VisionMission from '../../components/VisionMission';
 
 const AboutPage =() => {
     return(
@@ -23,6 +24,7 @@ const AboutPage =() => {
 
             <PageTitle pageTitle={'About Us'} pagesub={'About'} backgroundImage={bannerimg} /> 
             <About abimg={abimg}/>
+            <VisionMission/>
             <ProjectSection/>
             {/* <ServiceSection/> */}
             <TeamSection/>

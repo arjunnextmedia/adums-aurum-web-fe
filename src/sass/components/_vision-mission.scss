@@ -1,0 +1,612 @@
+// VisionMission.scss
+// ============================================
+// Variables - White Theme with Gold Accents
+// ============================================
+$gold-primary: #D4AF37;
+$gold-light: #F4D03F;
+$gold-dark: #B8941F;
+$white-bg: #ffffff;
+$light-bg: #f8f9fa;
+$lighter-bg: #fafbfc;
+$card-bg: #ffffff;
+$text-dark: #2c3e50;
+$text-gray: #6c757d;
+$text-light: #95a5a6;
+$border-light: #e9ecef;
+$shadow-light: rgba(0, 0, 0, 0.08);
+$shadow-medium: rgba(0, 0, 0, 0.12);
+$shadow-hover: rgba(212, 175, 55, 0.15);
+$transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.3s ease;
+
+// ============================================
+// Keyframe Animations
+// ============================================
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba($gold-primary, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba($gold-primary, 0.7);
+  }
+}
+
+// ============================================
+// Main Section
+// ============================================
+.vision-mission-section {
+  padding: 100px 0;
+  background: $white-bg;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+}
+
+// ============================================
+// Section Title
+// ============================================
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 3;
+
+  .subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $gold-primary;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+    animation: fadeInDown 0.8s ease-out;
+    position: relative;
+  }
+
+  .main-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    animation: fadeInUp 0.8s ease-out;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    position: relative;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
+    }
+  }
+
+  .title-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $gold-primary, transparent);
+      position: relative;
+    }
+
+    .gold-dot {
+      width: 10px;
+      height: 10px;
+      background: $gold-primary;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba($gold-primary, 0.5);
+      animation: glowPulse 2s ease-in-out infinite;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid $gold-primary;
+        border-radius: 50%;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+// ============================================
+// Cards Row
+// ============================================
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 3;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+// ============================================
+// Vision Mission Card
+// ============================================
+.vision-mission-card {
+  background: $card-bg;
+  border-radius: 15px;
+  padding: 50px 40px;
+  position: relative;
+  border: 2px solid $border-light;
+  transition: $transition-smooth;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 
+    0 10px 30px $shadow-light,
+    0 1px 3px $shadow-medium;
+
+  @media (max-width: 768px) {
+    padding: 40px 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 35px 25px;
+  }
+
+  &:hover,
+  &.active {
+    transform: translateY(-12px);
+    border: 2px solid rgba($gold-primary, 0.3);
+    box-shadow: 
+      0 20px 50px $shadow-hover,
+      0 8px 20px rgba($gold-primary, 0.1),
+      0 0 0 1px rgba($gold-primary, 0.1);
+
+    .icon-circle {
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 
+        0 10px 35px rgba($gold-primary, 0.3),
+        0 0 50px rgba($gold-primary, 0.15);
+    }
+
+    .card-icon {
+      animation: iconRotate 0.6s ease-in-out;
+    }
+
+    .corner-decoration {
+      opacity: 1;
+      width: 40px;
+      height: 40px;
+
+      &.top-left {
+        top: 15px;
+        left: 15px;
+      }
+
+      &.top-right {
+        top: 15px;
+        right: 15px;
+      }
+
+      &.bottom-left {
+        bottom: 15px;
+        left: 15px;
+      }
+
+      &.bottom-right {
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+
+    .shimmer-effect {
+      animation: shimmer 1.2s ease-in-out;
+    }
+
+    .card-title {
+      color: $gold-dark;
+    }
+  }
+
+  // Specific card styling
+  &.mission-card {
+    .icon-circle {
+      background: linear-gradient(135deg, $gold-primary 0%, $gold-light 100%);
+    }
+  }
+
+  &.vision-card {
+    .icon-circle {
+      background: linear-gradient(135deg, $gold-light 0%, $gold-primary 100%);
+    }
+  }
+}
+
+// ============================================
+// Icon Wrapper
+// ============================================
+.card-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  height: 100px;
+  z-index: 2;
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, $gold-primary, $gold-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 
+      0 5px 20px rgba($gold-primary, 0.25),
+      0 2px 8px rgba($gold-primary, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      color: $white-bg;
+      stroke: $white-bg;
+      stroke-width: 2;
+      transition: $transition-fast;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    }
+  }
+
+  .icon-glow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba($gold-primary, 0.25), transparent 70%);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(15px);
+  }
+}
+
+// ============================================
+// Card Title
+// ============================================
+.card-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: $gold-primary;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Georgia', serif;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
+  transition: $transition-fast;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $gold-primary, transparent);
+  }
+}
+
+// ============================================
+// Card Content
+// ============================================
+.card-content {
+  position: relative;
+  z-index: 2;
+
+  .card-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: $text-gray;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+}
+
+// ============================================
+// Corner Decorations
+// ============================================
+.card-decorative-elements {
+  pointer-events: none;
+
+  .corner-decoration {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $gold-primary;
+    opacity: 0.2;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+
+    &.top-left {
+      top: 20px;
+      left: 20px;
+      border-right: none;
+      border-bottom: none;
+      border-radius: 2px 0 0 0;
+    }
+
+    &.top-right {
+      top: 20px;
+      right: 20px;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0 2px 0 0;
+    }
+
+    &.bottom-left {
+      bottom: 20px;
+      left: 20px;
+      border-right: none;
+      border-top: none;
+      border-radius: 0 0 0 2px;
+    }
+
+    &.bottom-right {
+      bottom: 20px;
+      right: 20px;
+      border-left: none;
+      border-top: none;
+      border-radius: 0 0 2px 0;
+    }
+  }
+}
+
+// ============================================
+// Shimmer Effect
+// ============================================
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba($gold-primary, 0.08) 25%,
+    rgba($gold-primary, 0.15) 50%,
+    rgba($gold-primary, 0.08) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 4;
+  transform: skewX(-20deg);
+}
+
+// ============================================
+// Floating Particles (Hidden by default)
+// ============================================
+.floating-particles {
+  display: none;
+}
+
+// ============================================
+// Responsive Design
+// ============================================
+@media (max-width: 992px) {
+  .vision-mission-section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-mission-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
+
+    .main-title {
+      font-size: 32px;
+    }
+  }
+
+  .cards-row {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-mission-section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    .subtitle {
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .main-title {
+      font-size: 28px;
+    }
+
+    .title-divider {
+      .gold-line {
+        width: 40px;
+      }
+    }
+  }
+}
+
+// ============================================
+// Print Styles
+// ============================================
+@media print {
+  .vision-mission-section {
+    background: white;
+  }
+
+  .floating-particles,
+  .shimmer-effect,
+  .icon-glow {
+    display: none;
+  }
+
+  .vision-mission-card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}
+
+// ============================================
+// Accessibility
+// ============================================
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Focus states for accessibility
+.vision-mission-card {
+  &:focus {
+    outline: 2px solid $gold-primary;
+    outline-offset: 4px;
+  }
+
+  &:focus-visible {
+    border-color: $gold-primary;
+  }
+}
+
+// ============================================
+// Additional Enhancements
+// ============================================
+
+// Card entrance animation
+.vision-mission-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+
+  &:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+}
+
+// Loading state
+.vision-mission-section.loading {
+  .vision-mission-card {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
