@@ -114,7 +114,11 @@ const Footer = (props) =>{
                                 </div>
                                 <div className="contact-ft">
                                     <ul>
-                                        <li><i className="fi flaticon-location"></i>208, Al Qiyadah Building, <br/> Dubai International Airport, Dubai</li>
+                                        <li><i className="fi flaticon-location"></i>
+       Al Rostamani Building<br/>
+                            (Al Qiyada Building)<br/>
+                            Dubai, UAE
+                                        </li>
                                         <li>
                                             <i className="fi flaticon-telephone"></i>
                                             <a href='tel:+97142979110' >+971 4 297 9110 <span> - Landline</span></a> 
