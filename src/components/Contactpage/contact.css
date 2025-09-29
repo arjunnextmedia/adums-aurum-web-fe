@@ -1,13 +1,13 @@
-/* Contact Page - Enhanced Styles */
+/* Contact Page - Enhanced Styles - Theme Matched */
 
 .contact-page {
-  background: #202026;
+  background: #fff;
   min-height: 100vh;
 }
 
 /* Header Styles */
 .contact-header {
-  background: #202026;
+  background: #fff;
   backdrop-filter: blur(10px);
   position: relative;
 }
@@ -19,7 +19,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent); */
   pointer-events: none;
 }
 
@@ -28,7 +27,7 @@
 }
 
 .text-light {
-  color: #e0e0e0 !important;
+  color: #666666 !important; /* Changed from light gray to darker gray for better readability */
 }
 
 .divider-line {
@@ -61,7 +60,7 @@
 
 /* Map Section */
 .map-section {
-  background: #202026;
+  background: #fff;
   position: relative;
   overflow: hidden;
 }
@@ -73,7 +72,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #202026;
+  background: #fff;
   pointer-events: none;
 }
 
@@ -82,13 +81,12 @@
   z-index: 2;
 }
 
-/* Location Details Panel */
+/* Location Details Panel - Theme Updated */
 .location-details-panel {
-  background: rgba(26, 26, 26, 0.95);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: #ffffff;
+  border: 2px solid rgba(212, 175, 55, 0.2);
   border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
   overflow: hidden;
   height: fit-content;
   transition: all 0.3s ease;
@@ -96,11 +94,11 @@
 
 .location-details-panel:hover {
   transform: translateY(-5px);
-  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.2);
   border-color: rgba(212, 175, 55, 0.4);
 }
 
-/* Business Header */
+/* Business Header - Removed since it's commented out in React */
 .business-header {
   padding: 24px;
   border-bottom: 1px solid rgba(212, 175, 55, 0.1);
@@ -116,12 +114,12 @@
 .logo-circle {
   width: 60px;
   height: 60px;
-  background: #000;
+  background: #d4af37;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 8px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -132,7 +130,7 @@
 .logo-text {
   font-size: 24px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 
@@ -162,27 +160,27 @@
 
 .rating-count {
   font-size: 14px;
-  color: #888;
+  color: #666;
 }
 
 .business-type {
   font-size: 14px;
-  color: #ccc;
+  color: #888;
   margin: 0;
 }
 
-/* Quick Info Section */
+/* Quick Info Section - Theme Updated */
 .quick-info-section {
   padding: 0;
-  margin-top: 15px;
+  margin-top: 0; /* Removed margin since business header is commented */
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 16px 24px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -211,26 +209,27 @@
 
 .info-item:hover .info-icon {
   transform: scale(1.1);
+  background: rgba(212, 175, 55, 0.2);
 }
 
 .address-icon {
-  background: rgba(244, 67, 54, 0.1);
-  color: #f44336;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
 }
 
 .phone-icon {
-  background: rgba(76, 175, 80, 0.1);
-  color: #4caf50;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
 }
 
 .time-icon {
-  background: rgba(33, 150, 243, 0.1);
-  color: #2196f3;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
 }
 
 .services-icon {
-  background: rgba(156, 39, 176, 0.1);
-  color: #9c27b0;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
 }
 
 .info-details {
@@ -238,34 +237,34 @@
 }
 
 .info-details strong {
-  font-size: 14px;
+  font-size: 15px;
   color: #d4af37;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
 .info-details p {
   font-size: 14px;
-  color: #e0e0e0;
+  color: #666666; /* Changed from light to darker for better readability */
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .phone-link {
-  color: #4caf50;
+  color: #d4af37;
   text-decoration: none;
   transition: color 0.2s ease;
-
+  font-weight: 500;
 }
 
 .phone-link:hover {
-  color: #66bb6a;
+  color: #b8941f;
   text-decoration: underline;
 }
 
 .status-open {
-  color: #4caf50;
+  color: #d4af37;
   font-weight: 600;
 }
 
@@ -274,10 +273,11 @@
   font-size: 12px;
 }
 
-/* Action Buttons Section */
+/* Action Buttons Section - Theme Updated */
 .action-buttons-section {
   border-top: 1px solid rgba(212, 175, 55, 0.1);
-  background: rgba(26, 26, 26, 0.5);
+  background: rgba(248, 248, 248, 0.8); /* Light background instead of dark */
+  padding: 20px;
 }
 
 .primary-actions {
@@ -293,11 +293,11 @@
   gap: 8px;
 }
 
-/* Button Styles */
+/* Button Styles - Theme Updated */
 .directions-btn {
   background: linear-gradient(135deg, #d4af37, #f1c40f) !important;
   border: none !important;
-  color: #1a1a1a !important;
+  color: #ffffff !important; /* Changed to white for better contrast */
   font-weight: 600;
   padding: 12px 16px;
   border-radius: 8px;
@@ -309,16 +309,16 @@
 }
 
 .directions-btn:hover {
-  background: linear-gradient(135deg, #f1c40f, #d4af37) !important;
+  background: linear-gradient(135deg, #b8941f, #d4af37) !important;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
-  color: #1a1a1a !important;
+  color: #ffffff !important;
 }
 
 .call-btn {
-  background: rgba(76, 175, 80, 0.2) !important;
-  border: 1px solid rgba(76, 175, 80, 0.3) !important;
-  color: #4caf50 !important;
+  background: rgba(212, 175, 55, 0.1) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  color: #d4af37 !important;
   font-weight: 600;
   padding: 12px 16px;
   border-radius: 8px;
@@ -330,15 +330,15 @@
 }
 
 .call-btn:hover {
-  background: rgba(76, 175, 80, 0.3) !important;
-  border-color: #4caf50 !important;
-  color: #4caf50 !important;
+  background: rgba(212, 175, 55, 0.2) !important;
+  border-color: #d4af37 !important;
+  color: #b8941f !important;
   transform: translateY(-1px);
 }
 
 .secondary-btn {
   background: transparent !important;
-  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
   color: #d4af37 !important;
   font-weight: 500;
   padding: 10px 12px;
@@ -353,16 +353,16 @@
 .secondary-btn:hover {
   background: rgba(212, 175, 55, 0.1) !important;
   border-color: #d4af37 !important;
-  color: #d4af37 !important;
+  color: #b8941f !important;
 }
 
-/* Google Maps Embed */
+/* Google Maps Embed - Theme Updated */
 .map-embed-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
   overflow: hidden;
   height: 600px;
   transition: all 0.3s ease;
@@ -370,7 +370,7 @@
 
 .map-embed-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.25);
   border-color: rgba(212, 175, 55, 0.4);
 }
 
@@ -388,7 +388,7 @@
   border-radius: 16px;
 }
 
-/* Map Controls Overlay */
+/* Map Controls Overlay - Theme Updated */
 .map-controls {
   position: absolute;
   top: 16px;
@@ -402,7 +402,7 @@
 .map-control-btn {
   width: 44px !important;
   height: 44px !important;
-  background: rgba(26, 26, 26, 0.9) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border: 1px solid rgba(212, 175, 55, 0.3) !important;
   border-radius: 8px !important;
   color: #d4af37 !important;
@@ -412,18 +412,19 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   padding: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .map-control-btn:hover {
-  background: rgba(212, 175, 55, 0.2) !important;
+  background: rgba(212, 175, 55, 0.1) !important;
   border-color: #d4af37 !important;
-  color: white !important;
+  color: #b8941f !important;
   transform: scale(1.05);
 }
 
 /* Contact Form Section */
 .contact-form-section {
-  background: #202026;
+  background: #fff;
   position: relative;
 }
 
@@ -434,24 +435,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: linear-gradient(45deg, rgba(212, 175, 55, 0.05), transparent); */
   pointer-events: none;
 }
 
-/* Form Card Styles */
+/* Form Card Styles - Theme Updated */
 .form-card {
-  background: rgba(26, 26, 26, 0.95);
+  background: #ffffff;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .form-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 35px 70px rgba(212, 175, 55, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
   border-color: rgba(212, 175, 55, 0.4);
 }
 
@@ -470,30 +470,30 @@
   background: linear-gradient(90deg, #d4af37, #f1c40f, #d4af37);
 }
 
-/* Form Styles */
+/* Form Styles - Theme Updated */
 .custom-form-control {
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(248, 248, 248, 0.8);
+  border: 2px solid rgba(212, 175, 55, 0.2);
   border-radius: 12px;
-  color: #fff;
+  color: #333333; /* Dark text for better readability */
   padding: 15px 20px;
   transition: all 0.3s ease;
   font-size: 14px;
 }
 
 .custom-form-control:focus {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.95);
   border-color: #d4af37;
   box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
-  color: #fff;
+  color: #333333;
   transform: scale(1.02);
 }
 
 .custom-form-control::placeholder {
-  color: #b0b0b0;
+  color: #999999;
 }
 
-/* Form Labels */
+/* Form Labels - Theme Updated */
 .form-label {
   font-weight: 600;
   margin-bottom: 8px;
@@ -508,7 +508,7 @@
   border-radius: 12px;
   padding: 15px 40px;
   font-weight: 600;
-  color: #000;
+  color: #ffffff; /* Changed to white */
   transition: all 0.3s ease;
   font-size: 16px;
   min-width: 200px;
@@ -518,7 +518,7 @@
   background: linear-gradient(45deg, #b8941f, #9a7c1a);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-  color: #000;
+  color: #ffffff;
 }
 
 .submit-btn:disabled {
@@ -541,17 +541,22 @@
   filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
 }
 
-/* Full Screen Modal */
+/* Full Screen Modal - Theme Updated */
 .map-modal .modal-content {
-  background: rgba(26, 26, 26, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 12px;
   backdrop-filter: blur(10px);
 }
 
 .map-modal .modal-header {
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.map-modal .modal-title {
+  color: #d4af37;
 }
 
 .map-modal .btn-close {
@@ -564,6 +569,7 @@
 
 .map-modal .btn-close:hover {
   opacity: 1;
+  color: #b8941f;
 }
 
 .fullscreen-map-container {
@@ -579,9 +585,9 @@
   border: none;
 }
 
-/* Trust Section */
+/* Trust Section - Theme Updated */
 .trust-section {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(248, 248, 248, 0.8);
   border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
@@ -599,6 +605,7 @@
 .badge-icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #d4af37;
   filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
   animation: goldGlow 2s ease-in-out infinite alternate;
 }
@@ -612,38 +619,15 @@
   }
 }
 
-/* Animations */
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Custom Select Dropdown Styling */
+.custom-form-control option {
+  background: #ffffff;
+  color: #333333;
 }
 
-.location-details-panel,
-.map-embed-card,
-.form-card {
-  animation: slideInUp 0.8s ease-out;
-}
-
-/* Focus States */
-.directions-btn:focus,
-.call-btn:focus,
-.secondary-btn:focus,
-.map-control-btn:focus,
-.submit-btn:focus {
-  outline: 2px solid #d4af37;
-  outline-offset: 2px;
-}
-
-.phone-link:focus {
-  outline: 2px solid #4caf50;
-  outline-offset: 2px;
-  border-radius: 4px;
+/* Additional Text Color Fixes */
+.contact-page .lead {
+  color: #666666 !important;
 }
 
 /* Responsive Design */
@@ -768,18 +752,18 @@
   .location-details-panel,
   .form-card {
     border: 2px solid #d4af37;
-    background: #000;
+    background: #ffffff;
   }
   
   .business-name,
   .info-details strong,
   .text-gold {
-    color: #ffff00 !important;
+    color: #b8941f !important;
   }
   
   .info-details p,
   .text-light {
-    color: #ffffff !important;
+    color: #333333 !important;
   }
 }
 
@@ -805,7 +789,7 @@
 
 /* Loading States */
 .google-maps-embed {
-  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  background: linear-gradient(135deg, #f8f8f8, #ffffff);
 }
 
 /* Print Styles */

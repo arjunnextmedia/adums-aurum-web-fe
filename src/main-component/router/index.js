@@ -35,6 +35,7 @@ import ForgotPassword from '../ForgotPassword'
 import PrivacyPolicy from '../privacyPolicy';
 import PrivacyPolicyPage from '../privacyPolicy';
 import TermsOfUse from '../../components/termsOfUse';
+import RouteLoader from '../../components/RouteLoader';
 
 
 const AllRoute = () => {
@@ -42,6 +43,7 @@ const AllRoute = () => {
   return (
     <div className="App">
       <BrowserRouter>
+      <RouteLoader />
         <Routes>
           {/* <Route exact path='home' element={<Homepage/>} /> */}
           <Route path='/' element={<Homepage4/>} />

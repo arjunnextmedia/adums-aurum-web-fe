@@ -31,10 +31,10 @@ const FunFact = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">
-                        <div className="wpo-fun-fact-grids clearfix">
+                        <div className="wpo-fun-fact-grids clearfix ">
                             {funfact.map((funfact, fitem) => (
                                 <div className="grid" key={fitem}>
-                                    <div className="info">
+                                    <div className="info ">
                                         <h3>{funfact.title}</h3>
                                         <p>{funfact.subTitle}</p>
                                     </div>

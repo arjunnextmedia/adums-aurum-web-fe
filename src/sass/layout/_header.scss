@@ -1410,7 +1410,7 @@
 
 
 	#navbar > ul > li > a {
-		color: $white;
+		color: $black-bg-color;
 		&:before{
 			@media(min-width:991px){
 				background: $white;
@@ -1419,14 +1419,14 @@
 
 		&:hover,
 		&:focus{
-			color: $white;
+			color: #D4AF37;
 		}
 	}
 
 	.header-right .cart-toggle-btn,
 	.header-right .search-toggle-btn {
 		.fi{
-			color: $white;
+			color: #D4AF37;
 		}
 	}
 }
@@ -1475,7 +1475,7 @@
 	position: absolute;
 	left: 0;
 	width: 100%;
-	background: transparent;
+	background: #eeecec;
 
 	@media (min-width: 992px){
 		#navbar {
@@ -1513,7 +1513,7 @@
 		}
 
 		.header-right-menu-wrap{
-			background: #292932;
+	background: #eeecec;
 			width: 420px;
 			height: 100%;
 			z-index: 100;
@@ -1573,7 +1573,7 @@
 				margin-bottom: 30px;
                h3{
 				   font-size: 25px;
-				   color: $white;
+				   color: #000;
 				   margin-bottom: 25px;
 			   }
 			}
@@ -1599,7 +1599,7 @@
 						padding-bottom: 15px;
 						position: relative;
 						padding-left: 35px;
-						color: $white;
+						color: #3c3a3a;
 						font-size: 16px;
 		
 						i{
@@ -1692,5 +1692,5 @@
 
   .fixed-navbar.active .wpo-header-style-2,
   .fixed-navbar.active .wpo-header-style-3{
-    background: $black-bg-color;
+    background: $white;
   }

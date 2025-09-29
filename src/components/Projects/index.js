@@ -53,7 +53,7 @@ class ProjectSection extends Component {
     return (
       <div
         className={`wpo-project-area ${this.props.pClass}`}
-        style={{ background: "#202026" }}
+        // style={{ background: "#202026" }}
       >
         <div className="container-fluid">
           <div className="row align-items-center">
@@ -63,6 +63,7 @@ class ProjectSection extends Component {
                   width: "100%",
                   textAlign: "center",
                   marginBottom: "2rem",
+                  marginTop: "2rem",
                 }}
               >
                 <span
@@ -79,7 +80,7 @@ class ProjectSection extends Component {
                 <h2
                   className="wpo-project-Heading"
                   style={{
-                    color: "#ffffff",
+                    color: "#000",
                     fontSize: "2.5rem",
                     fontWeight: "700",
                     textAlign: "center",

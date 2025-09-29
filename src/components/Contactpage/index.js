@@ -21,15 +21,20 @@ const ContactPage = () => {
   // Map Modal State
   const [showMapModal, setShowMapModal] = useState(false);
 
-  // Company Location Data - Updated with correct coordinates
+  // Updated Google Maps Embed URLs with the new link
+  const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.4132972329216!2d55.3477924!3d25.272916499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cf1ff168621%3A0xfa85934bffa14d07!2sAl%20Rostamani%20Building%20(Al%20Qiyada%20Building)%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1759142733888!5m2!1sen!2sin`;
+
+  const fullScreenEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.4132972329216!2d55.3477924!3d25.272916499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cf1ff168621%3A0xfa85934bffa14d07!2sAl%20Rostamani%20Building%20(Al%20Qiyada%20Building)%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1759142733888!5m2!1sen!2sin`;
+
+  // Updated Company Location Data with correct coordinates from the new map link
   const companyLocation = {
-    lat: 25.256328277672914,
-    lng: 55.29989497538378,
-    address: "Al Rostamani Building, Al Hamriya, Dubai, UAE",
+    lat: 25.272916499999997,
+    lng: 55.3477924,
+    address: "Al Rostamani Building (Al Qiyada Building), Dubai, UAE",
     phone: "+971 4 297 9110",
     email: "info@adamsaurum.com",
     hours: "Mon-Fri: 9AM-6PM",
-    googleMapsUrl: `https://www.google.com/maps/dir/?api=1&destination=25.256328277672914,55.29989497538378`
+    googleMapsUrl: `https://www.google.com/maps/dir/?api=1&destination=25.272916499999997,55.3477924`
   };
 
   const investmentOptions = [
@@ -80,28 +85,20 @@ const ContactPage = () => {
   };
 
   const handleCall = () => {
-    window.open(`tel:${companyLocation.phone}`, '_self');
+    window.open(`tel:${companyLocation.phone}`, '_blank');
   };
 
   const handleEmail = () => {
-    window.open(`mailto:${companyLocation.email}`, '_self');
+    window.open(`mailto:${companyLocation.email}`, '_blank');
   };
 
   const handleViewLarger = () => {
     setShowMapModal(true);
   };
 
-  // Google Maps Embed URLs - Updated with your actual embed URL
-  const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.8819119542095!2d55.29989497538378!3d25.256328277672914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f433ab051b025%3A0x7a65f3795ae1ef75!2sAl%20Rostamani%20Building%20-%20Al%20Hamriya%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1758888132784!5m2!1sen!2sin`;
-
-  const fullScreenEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.8819119542095!2d55.29989497538378!3d25.256328277672914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f433ab051b025%3A0x7a65f3795ae1ef75!2sAl%20Rostamani%20Building%20-%20Al%20Hamriya%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1758888132785!5m2!1sen!2sin`;
-
   return (
     <div className="contact-page">
       <ToastContainer />
-
-      {/* Header Section */}
-   
 
       {/* Map Section */}
       <section className="map-section py-5">
@@ -114,9 +111,9 @@ const ContactPage = () => {
                     Visit Our Office
                   </h2>
                   <div className="divider-line mx-auto mb-4"></div>
-                  <p className="lead text-light">
-                    Located in the heart of Dubai's financial district, our office provides
-                    convenient access for all your gold investment needs.
+                  <p className="lead" style={{color:'#666666'}}>
+                    Located in the prestigious Al Rostamani Building (Al Qiyada Building) in Dubai, 
+                    our office provides convenient access for all your gold investment needs.
                   </p>
                 </div>
               </Col>
@@ -129,39 +126,8 @@ const ContactPage = () => {
               <Fade left>
                 <Card className="location-details-panel">
                   <Card.Body className="p-0">
-                    {/* Business Header */}
-                    {/* <div className="business-header">
-                      <div className="business-logo">
-                        <div className="logo-circle">
-                          <img src={imgIcon} alt="logo-icon" width={30} />
-                        </div>
-                      </div>
-                      <div className="business-info">
-                        <h3 className="business-name">Adams Aurum</h3>
-                        <div className="business-rating">
-                          <div className="stars">★★★★★</div>
-                          <span className="rating-count">4.8 (127 reviews)</span>
-                        </div>
-                        <p className="business-type">Gold Investment & Trading</p>
-                      </div>
-                    </div> */}
-
                     {/* Quick Info */}
                     <div className="quick-info-section">
-                      <div className="info-item">
-                        <div className="info-icon address-icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="currentColor"/>
-                          </svg>
-                        </div>
-                        <div className="info-details">
-                          <strong>Address</strong>
-                          <p>Al Rostamani Building,<br/>
-                          Al Hamriya, Dubai, UAE
-                          </p>
-                        </div>
-                      </div>
-
                       <div className="info-item">
                         <div className="info-icon phone-icon">
                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -180,7 +146,22 @@ const ContactPage = () => {
                             <a href={`tel:+971569535775`} target="_blank" rel="noopener noreferrer" className="phone-link">
                          +971 56 953 5775
                             </a>
-                            
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="info-item">
+                        <div className="info-icon address-icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" fill="currentColor"/>
+                          </svg>
+                        </div>
+                        <div className="info-details">
+                          <strong>Address</strong>
+                          <p>
+                            Al Rostamani Building<br/>
+                            (Al Qiyada Building)<br/>
+                            Dubai, UAE
                           </p>
                         </div>
                       </div>
@@ -200,22 +181,10 @@ const ContactPage = () => {
                           <small className="text-muted">{companyLocation.hours}</small>
                         </div>
                       </div>
-
-                      {/* <div className="info-item">
-                        <div className="info-icon services-icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                        </div>
-                        <div className="info-details">
-                          <strong>Services</strong>
-                          <p>Gold Trading • Investment Consulting • Secure Storage</p>
-                        </div>
-                      </div> */}
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="action-buttons-section p-3">
+                    <div className="action-buttons-section">
                       <div className="primary-actions">
                         <Button onClick={handleGetDirections} className="directions-btn">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="me-2">
@@ -247,13 +216,6 @@ const ContactPage = () => {
                           </svg>
                           Larger Map
                         </Button>
-
-                        {/* <Button className="secondary-btn">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="me-2">
-                            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                          Save
-                        </Button> */}
                       </div>
                     </div>
                   </Card.Body>
@@ -272,7 +234,7 @@ const ContactPage = () => {
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Adams Aurum Location"
+                      title="Adams Aurum Location - Al Rostamani Building"
                     ></iframe>
                     
                     {/* Map Overlay Controls */}
@@ -314,7 +276,7 @@ const ContactPage = () => {
             <div className="modal-dialog modal-xl modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header border-0">
-                  <h5 className="modal-title text-gold">Adams Aurum - Dubai Office</h5>
+                  <h5 className="modal-title text-gold">Adams Aurum - Al Rostamani Building, Dubai</h5>
                   <button 
                     type="button" 
                     className="btn-close btn-close-white"
@@ -329,7 +291,7 @@ const ContactPage = () => {
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Adams Aurum Location - Full Screen"
+                      title="Adams Aurum Location - Full Screen - Al Rostamani Building"
                     ></iframe>
                   </div>
                 </div>
@@ -339,8 +301,8 @@ const ContactPage = () => {
         )}
       </section>
 
-      {/* Contact Form Section */}
-         <section className="contact-header py-5 ">
+      {/* Contact Form Header Section */}
+      <section className="contact-header py-5">
         <Container>
           <Fade top>
             <Row>
@@ -349,7 +311,7 @@ const ContactPage = () => {
                   Connect With Our Experts
                 </h1>
                 <div className="divider-line mb-4"></div>
-                <p className="lead text-light">
+                <p className="lead" style={{color:'#666666'}}>
                   Our team of elite gold investment specialists is dedicated to
                   guiding you toward{" "}
                   <span className="text-gold">prosperous financial decisions</span>.
@@ -361,28 +323,20 @@ const ContactPage = () => {
           </Fade>
         </Container>
       </section>
-      <section className="contact-form-section py-5 ">
+
+      {/* Contact Form Section */}
+      <section className="contact-form-section py-5">
         <Container>
           <Fade bottom>
             <Row>
               <Col lg={8} className="mx-auto mb-5">
-                {/* <div className="section-header text-center mb-5">
-                  <h2 className="display-5 fw-bold text-gold mb-3">
-                    Begin Your Gold Journey
-                  </h2>
-                  <div className="divider-line mx-auto mb-4"></div>
-                  <p className="lead text-light">
-                    Complete the form below and our expert will contact you within 24 hours
-                  </p>
-                </div> */}
-
                 <Card className="form-card">
                   <Card.Body className="p-4">
                     <Form onSubmit={handleSubmit}>
                       <Row>
                         <Col md={6} className="mb-3">
                           <Form.Group>
-                            <Form.Label className="text-light fw-semibold">
+                            <Form.Label>
                               Full Name
                             </Form.Label>
                             <Form.Control
@@ -399,7 +353,7 @@ const ContactPage = () => {
 
                         <Col md={6} className="mb-3">
                           <Form.Group>
-                            <Form.Label className="text-light fw-semibold">
+                            <Form.Label>
                               Phone Number
                             </Form.Label>
                             <Form.Control
@@ -417,7 +371,7 @@ const ContactPage = () => {
                       <Row>
                         <Col md={6} className="mb-3">
                           <Form.Group>
-                            <Form.Label className="text-light fw-semibold">
+                            <Form.Label>
                               Email Address
                             </Form.Label>
                             <Form.Control
@@ -434,7 +388,7 @@ const ContactPage = () => {
 
                         <Col md={6} className="mb-3">
                           <Form.Group>
-                            <Form.Label className="text-light fw-semibold">
+                            <Form.Label>
                               Investment Interest
                             </Form.Label>
                             <Form.Select
@@ -457,7 +411,7 @@ const ContactPage = () => {
                       </Row>
 
                       <Form.Group className="mb-4">
-                        <Form.Label className="text-light fw-semibold">
+                        <Form.Label>
                           Tell us about your investment goals and any questions
                           you have...
                         </Form.Label>
@@ -491,13 +445,6 @@ const ContactPage = () => {
                           )}
                         </Button>
                       </div>
-
-                      {/* <div className="text-center mt-3">
-                        <div className="security-badge d-flex align-items-center justify-content-center">
-                          <span className="shield-icon me-2">🔒</span>
-                          <small className="text-light">256-bit SSL Encrypted</small>
-                        </div>
-                      </div> */}
                     </Form>
                   </Card.Body>
                 </Card>
@@ -506,9 +453,6 @@ const ContactPage = () => {
           </Fade>
         </Container>
       </section>
-
-
-
     </div>
   );
 };

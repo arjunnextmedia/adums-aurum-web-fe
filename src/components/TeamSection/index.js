@@ -13,7 +13,7 @@ const TeamSection = (props) => {
 
     return(
 
-        <section className="wpo-team-section section-padding" style={{background:'#202026'}}>
+        <section className="wpo-team-section section-padding" >
             <div className="container">
                 <SectionTitle subTitle={'Our Services'} MainTitle={'Our Services'}/>
                 <div className="wpo-team-wrap">
@@ -28,7 +28,7 @@ const TeamSection = (props) => {
                                     </Link> */}
                                 </div>
                                 <div className="wpo-team-text">
-                                    <h3 style={{color: '#fff'}}>
+                                    <h3>
                                         {/* <Link onClick={ClickHandler} to={`/team-single/${service.id}`}> */}
                                         {service.title}
                                         {/* </Link> */}

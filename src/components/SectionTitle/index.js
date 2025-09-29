@@ -5,7 +5,7 @@ const SectionTitle = (props) => {
         <div className="row">
             <div className="wpo-section-title">
                 <span>{props.subTitle}</span>
-                <h2 style={{color: '#fff'}}>{props.MainTitle}</h2>
+                <h2 style={{color: '#000'}}>{props.MainTitle}</h2>
             </div>
         </div>
     )

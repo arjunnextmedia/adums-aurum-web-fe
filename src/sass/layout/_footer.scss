@@ -56,11 +56,15 @@
     }
 
     p{
-        color: #fff;
+        color: #3c3a3a;
     }
     li{
-        color:#fff;
+        color:#3c3a3a;
     }
+    li:hover {
+    color: #CAAB06; 
+    // cursor: pointer; 
+}
 
     .container {
         position: relative;
@@ -124,7 +128,7 @@
             font-weight: 600;
             font-size: 25px;
             line-height: 36px;
-            color: $white;
+            color: #000;
             margin: 0;
             position: relative;
             font-family: $heading-font;
@@ -179,7 +183,7 @@
                 float: left;
 
                 a{
-                    color: $white;
+                    color: #3c3a3a;
                     width: 36px;
                     height: 36px;
                     line-height: 40px;
@@ -232,11 +236,12 @@
             li{
                 position: relative;
                 a{
-                    color:  #fff;
+                    color:  #3c3a3a;
                     font-size: 17px;
 
                     &:hover{
                         text-decoration: underline;
+                        color: #CAAB06;
                     }
                 }
             }
@@ -247,35 +252,58 @@
     }
 
 
-    .contact-ft {
-        margin-top: 20px;
-        padding-right: 60px;
+.contact-ft {
+  margin-top: 20px;
+  padding-right: 60px;
 
-        @media(max-width:1500px){
-            padding-right:0px;
+  @media(max-width:1500px) {
+    padding-right: 0px;
+  }
+
+  ul {
+    li {
+      padding-bottom: 15px;
+      position: relative;
+      padding-left: 35px;
+      color: #3c3a3a;
+      font-size: 16px;
+      transition: color 0.3s ease;
+
+      i {
+        position: absolute;
+        left: 0;
+        top: 2px;
+      }
+
+      .fi:before {
+        font-size: 20px;
+        margin-right: 15px;
+      }
+
+      a {
+        color: #3c3a3a; // default color for links
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #CAAB06; // gold on hover
+          text-decoration: underline; // optional
         }
+      }
 
-        ul {
-            li {
-                padding-bottom: 15px;
-                position: relative;
-                padding-left: 35px;
-                color: $white;
-                font-size: 16px;
+      &:hover {
+        color: #CAAB06; // li text changes
+        cursor: pointer;
 
-                i{
-                    position: absolute;
-                    left: 0;
-                    top: 2px;
-                }
-
-                .fi:before{
-                    font-size: 20px;
-                    margin-right: 15px;
-                }
-            }
+        i,
+        .fi:before {
+          color: #CAAB06; // icons change
         }
+      }
     }
+  }
+}
+
     
     
 
@@ -300,7 +328,7 @@
             li{
                 font-size: 16px;
                 margin: 0;
-                color: $white;
+                color: #3c3a3a;
 
                 @media (max-width: 991px) {
                     &:first-child{
@@ -313,7 +341,7 @@
                 }
         
                 a{
-                    color: $white;
+                    color: #3c3a3a;
                     text-decoration: none;
 
                     &:hover{
@@ -388,7 +416,7 @@
 }
 
 .wpo-site-footer-s2{
-    background: #202026;
+    background: #E8E8E8;
     
     &:before{
         display: none;

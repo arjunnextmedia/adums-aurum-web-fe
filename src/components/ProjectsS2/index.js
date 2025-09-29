@@ -11,7 +11,7 @@ const ProjectSectionS2 = () => {
 
 
     return (
-        <div className="wpo-project-area-s2 section-padding" style={{ backgroundColor: '#202026' }}>
+        <div className="wpo-project-area-s2 section-padding" >
             <div className="container">
                 <SectionTitle subTitle={'Our Products'} MainTitle={'Our Products'}/>
                 <div className="row align-items-center">

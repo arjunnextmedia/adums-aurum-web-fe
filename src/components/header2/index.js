@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Logo from "../../images/logo/adams-logo-horizontal-2.2.png";
+// import Logo from "../../images/logo/adams-logo-horizontal-2.2.png";
+import Logo from "../../images/logo/adams-logo-horizontal-latest.png";
 import { Link } from "react-router-dom";
 import MobileMenu from "../../components/MobileMenu";
 import Projects from "../../api/project";
@@ -226,7 +227,7 @@ export default class Header2 extends Component {
                                     <i className="fi flaticon-telephone"></i>
                                     <a
                                       href="tel:+97142979110"
-                                      style={{ color: "#fff" }}
+                                      style={{ color: "#3c3a3a" }}
                                       target="_blank"
                                       rel="noreferrer"
                                     >
@@ -236,7 +237,7 @@ export default class Header2 extends Component {
                                     <br />
                                     <a
                                       href="tel:+971569427727"
-                                      style={{ color: "#fff" }}
+                                      style={{ color: "#3c3a3a" }}
                                       target="_blank"
                                       rel="noreferrer"
                                     >
@@ -245,7 +246,7 @@ export default class Header2 extends Component {
                                     <br />
                                     <a
                                       href="tel:+971569535775"
-                                      style={{ color: "#fff" }}
+                                      style={{ color: "#3c3a3a" }}
                                       target="_blank"
                                       rel="noreferrer"
                                     >
@@ -256,7 +257,7 @@ export default class Header2 extends Component {
                                     <i className="fi flaticon-email"></i>
                                     <a
                                       href="mailto:info@adamsaurum.com"
-                                      style={{ color: "#fff" }}
+                                      style={{ color: "#3c3a3a" }}
                                       target="_blank"
                                       rel="noreferrer"
                                     >

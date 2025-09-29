@@ -6,7 +6,7 @@
 
  .wpo-about-area-s4,
  .wpo-about-area-s5{
-	 background: $black-bg-color;
+	 background: $white;
 	 position: relative;
 	 .wpo-about-img{
 		 padding-top: 35px;
@@ -32,7 +32,7 @@
 			 overflow: hidden;
 
 			 h2{
-				 color: $white;
+				 color: $black-bg-color;
 			 }
 
 			 p{
@@ -152,7 +152,7 @@
 		 .wpo-about-title{
 			 h2{
                font-size: 45px;
-			   color: $white;
+			   color: $black-bg-color;
 			   @media(max-width:1200px){
 					font-size: 35px;
 					line-height: 55px;
@@ -170,7 +170,7 @@
 		}
 		p,
 		.btns ul li.video-text a{
-			color: $black-section-text-color;
+			color: #3c3a3a;
 		}
 
 		.video-text{
